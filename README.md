@@ -45,7 +45,7 @@ Workshop #2 associated programs backend 2024
     1. POST /api/feedback/ -> создание сообщения
     2. GET /api/feedback/ -> просмотр всех сообщений
     3. GET /api/feedback/{id}/ -> просмотр сообщения по id
-    4. DU запросы запрещены (реализовать корректные коды ответа сервера и сообщения об ошибках)
+    4. DU запросы запрещены (реализовать корректные коды ответа сервера)
 11. Проверить с помощью Postman создание и получение сообщений
 12. Проверить с помощью Postman поведение при обновлении и удалении сообщений
 
@@ -54,8 +54,7 @@ Workshop #2 associated programs backend 2024
 1. Использовать вьюсеты (`from rest_framework import viewsets`)
 2. Использовать `serializers.ModelSerializer`
 3. Для маршрутов использовать роутер, например, `from rest_framework.routers import DefaultRouter`
-4. Для запрета DU использовать `mixins.ListModelMixin, mixins.CreateModelMixin`
-5. Для корректных ошибок в вьюсете переопределить `update`, `partial_update`, `destroy`
+4. Для запрета DU использовать `ListModelMixin, CreateModelMixin, RetrieveModelMixin` и `http_method_names`
 
 ### Дополнительное задание
 - Настроить на уровне сериализатора валидацию поля `name` на отсутствие в нем цифр.
